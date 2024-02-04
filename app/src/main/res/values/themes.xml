@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.RecyclingApp" parent="Base.Theme.RecyclingApp" />
+    <style name="ShapeAppearance.CircularBorder" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">100%</item>
+    </style>
 </resources>
