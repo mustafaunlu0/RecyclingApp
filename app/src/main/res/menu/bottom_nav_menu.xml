@@ -2,24 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/home"
+        android:id="@+id/homeFragment"
         android:icon="@drawable/home"
         android:title="Anasayfa" />
 
     <item
-        android:id="@+id/rank"
+        android:id="@+id/rankFragment"
         android:icon="@drawable/rank"
         android:title="Sıralama" />
 
     <item
-        android:id="@+id/map"
-        android:title="Geri Dönüşüm" />
+        android:id="@+id/mapsFragment"
+        android:title="Harita" />
     <item
         android:id="@+id/gift"
         android:icon="@drawable/gift"
         android:title="Hediyeler" />
     <item
-        android:id="@+id/profile"
+        android:id="@+id/profileFragment"
         android:icon="@drawable/account"
         android:title="Profil" />
 
