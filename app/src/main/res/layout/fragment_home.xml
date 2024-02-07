@@ -1,82 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.main.home.HomeFragment"
+    android:background="#F3F1F1"
     android:paddingHorizontal="15dp"
     android:paddingVertical="15dp"
-    android:background="#F3F1F1"
-    >
+    tools:context=".ui.main.home.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/top_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
 
         >
+
         <TextView
             android:id="@+id/username_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/ibm_regular"
             android:text="Hoş geldin, Mustafa"
             android:textColor="@color/black"
             android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
 
             />
+
         <TextView
             android:id="@+id/info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/username_textview"
-            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/ibm_regular"
-
             android:text="Hadi dünyayı güzelleştirelim."
             android:textColor="#7E7B7B"
             android:textSize="15sp"
-            />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/username_textview" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/coin_background"
+            android:orientation="horizontal"
+            android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:background="@drawable/coin_background"
-            android:padding="10dp"
-            android:orientation="horizontal"
-            android:layout_marginTop="15dp"
 
             >
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:layout_gravity="center_vertical"
                 android:layout_marginStart="2dp"
+                android:gravity="center_vertical"
                 android:paddingHorizontal="3dp"
                 android:text="0 puan"
                 android:textColor="@color/white"
-                android:layout_gravity="center_vertical"
-                android:gravity="center_vertical"
+                android:textSize="20sp"
 
                 />
+
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_marginStart="2dp"
-                android:paddingHorizontal="3dp"
                 android:gravity="center_vertical"
+                android:paddingHorizontal="3dp"
                 android:src="@drawable/account"
-                app:civ_border_width="2dp"
                 app:civ_border_color="@color/white"
-               />
+                app:civ_border_width="2dp" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -85,107 +86,271 @@
         android:id="@+id/recycling_imageview"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        app:layout_constraintTop_toBottomOf="@id/top_bar"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="25dp"
         android:background="@drawable/recycle"
-        android:layout_marginTop="30dp"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar" />
+
     <TextView
         android:id="@+id/recycling_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/recycling_imageview"
-        app:layout_constraintStart_toEndOf="@id/recycling_imageview"
-        android:text="Geri Dönüştür"
-        android:layout_marginTop="-15dp"
-        android:textColor="#49602E"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="-15dp"
         android:fontFamily="@font/ibm_semibold"
+        android:text="Geri Dönüştür"
+        android:textColor="#49602E"
         android:textSize="35sp"
+        app:layout_constraintStart_toEndOf="@id/recycling_imageview"
+        app:layout_constraintTop_toTopOf="@id/recycling_imageview"
 
         />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/product_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:orientation="horizontal"
-
-        app:layout_constraintTop_toBottomOf="@id/recycling_imageview"
         android:layout_marginTop="10dp"
-        />
+
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/recycling_imageview" />
 
     <ImageView
         android:id="@+id/info_imageview"
-        android:layout_width="30dp"
+        android:layout_width="40dp"
         android:layout_height="40dp"
-        app:layout_constraintTop_toBottomOf="@id/product_recyclerview"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/tree"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/black"
-        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/product_recyclerview"
 
         />
+
     <TextView
         android:id="@+id/info_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/info_imageview"
-        app:layout_constraintStart_toEndOf="@id/info_imageview"
-        android:text="Ne değişti?"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="-10dp"
         android:fontFamily="@font/ibm_semibold"
-        android:textSize="28sp"
-        android:textStyle="bold"
+        android:text="Ne değişti?"
+
         android:textColor="#49602E"
-        />
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/info_imageview"
+        app:layout_constraintTop_toTopOf="@id/info_imageview" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/energy_cardview"
         android:layout_width="180dp"
         android:layout_height="80dp"
-        app:cardBackgroundColor="#975959"
-
-        app:layout_constraintTop_toBottomOf="@id/info_imageview"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="#D8D6D6"
+        app:cardCornerRadius="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        />
+
+        app:layout_constraintTop_toBottomOf="@id/info_imageview">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/green_energy" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginHorizontal="7dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/ibm_semibold"
+            android:text="Kazanılan Enerji"
+            android:textColor="#707070"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="42dp"
+            android:text="0 WP"
+            android:textColor="#56860D"
+            android:textSize="18sp" />
+    </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/energy2_cardview"
         android:layout_width="180dp"
         android:layout_height="80dp"
         android:layout_marginStart="20dp"
-        app:cardBackgroundColor="#B52F2F"
-        app:layout_constraintTop_toTopOf="@id/energy_cardview"
+        app:cardBackgroundColor="#D8D6D6"
+        app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="@id/energy_cardview"
+
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/recycle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginHorizontal="7dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/ibm_semibold"
+            android:text="Dönüştürülen Atık"
+            android:textColor="#707070"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="40dp"
+            android:text="0 KG"
+            android:textColor="#245A26"
+            android:textSize="18sp" />
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/energy3_cardview"
         android:layout_width="180dp"
         android:layout_height="80dp"
-        app:cardBackgroundColor="#FF9800"
-        app:layout_constraintTop_toBottomOf="@id/energy_cardview"
         android:layout_marginTop="10dp"
+        app:cardBackgroundColor="#D8D6D6"
+        app:cardCornerRadius="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@id/energy_cardview">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/leaf" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginHorizontal="7dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/ibm_semibold"
+            android:text="Karbon Emisyonu"
+            android:textColor="#707070"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="43dp"
+            android:text="0.00 KG"
+            android:textColor="#008D00"
+            android:textSize="18sp" />
+
+    </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/energy4_cardview"
         android:layout_width="180dp"
         android:layout_height="80dp"
         android:layout_marginStart="20dp"
-        app:cardBackgroundColor="#00BCD4"
-        app:layout_constraintTop_toTopOf="@id/energy3_cardview"
+        app:cardBackgroundColor="#D8D6D6"
+        app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="@id/energy3_cardview"
+
+        >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/coin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginHorizontal="7dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/ibm_semibold"
+            android:text="Toplanan Puan"
+            android:textColor="#707070"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="43dp"
+            android:text="0 P"
+            android:textColor="#CAA228"
+            android:textSize="18sp" />
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/award_cardview"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="35dp"
         app:cardBackgroundColor="#8BC34A"
-        app:layout_constraintTop_toBottomOf="@id/energy3_cardview"
+        app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@id/energy3_cardview">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/app_info_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/ibm_semibold"
+            android:text="Atık Kutusu Tanımla"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/ibm_regular"
+            android:text="Çevrenizdeki geri dönüşüm kutularını sistemimize kaydedin"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+
+            />
+
+
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/info_cardview"
@@ -193,9 +358,43 @@
         android:layout_height="80dp"
         android:layout_marginTop="20dp"
         app:cardBackgroundColor="#3F51B5"
-        app:layout_constraintTop_toBottomOf="@id/award_cardview"
+        app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@id/award_cardview">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gift_backgorund" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/ibm_semibold"
+            android:text="Süpriz Hediyeler"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/ibm_regular"
+            android:text="Puanları topla, üst sıralaya oyna ve süpriz hediyeler kazanma şansı yakala."
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+
+            />
+
+
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
