@@ -15,9 +15,20 @@
         <item name="colorPrimary">#0F9D58</item>
         <item name="colorPrimaryVariant">#0F9D58</item>
         <item name="android:statusBarColor">#0F9D58</item>
+        <item name="colorOnPrimary">#000</item>
+    </style>
+    <style name="Theme.LogInTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#0F9D58</item>
+        <item name="colorPrimaryVariant">#0F9D58</item>
+        <item name="android:statusBarColor">#0F9D58</item>
+        <item name="colorOnPrimary">#000</item>
+    </style>
+    <style name="toggleButtonStyle" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#0F9D58</item>
+        <item name="colorPrimaryVariant">#0F9D58</item>
+        <item name="android:statusBarColor">#0F9D58</item>
 
         <item name="colorOnPrimary">#000</item>
     </style>
-
 
 </resources>
