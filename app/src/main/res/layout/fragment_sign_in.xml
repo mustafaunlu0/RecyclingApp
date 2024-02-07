@@ -146,7 +146,8 @@
             app:cornerRadius="5dp"
             app:icon="@drawable/icon_google"
             app:iconTint="@color/white"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:backgroundTint="#4285f4"/>
 
 
     </LinearLayout>
@@ -199,6 +200,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="Devam Et"
+            android:textColor="@color/white"
             app:cornerRadius="5dp" />
 
     </LinearLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "856987860310",
+    "project_id": "recyclingapp-e2762",
+    "storage_bucket": "recyclingapp-e2762.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856987860310:android:299c2782482e87a8252af7",
+        "android_client_info": {
+          "package_name": "com.example.recyclingapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwTHRlIC9U-OrFJsUzgXZGvzfxAn1chWI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,14 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.login.SignUpFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!--TODO logo here -->
+    <ImageView
+        android:id="@+id/logo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="100dp"
+        android:src="@color/cardview_dark_background"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/welcome_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Hoş geldin"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:fontFamily="@font/ibm_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+
+
+        />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/ibm_regular"
+        android:text="Hesap oluşturmak için önce cep telefonunuzu girin."
+        android:textColor="#7E7B7B"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcome_textview"
+        android:layout_marginStart="10dp"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/phone_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/info"
+        android:layout_marginTop="10dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/country_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Ülke Kodu"
+            android:clickable="false"
+            android:textColor="#707070"
+            android:backgroundTint="#D8D6D6"
+            app:cornerRadius="5dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textAlignment="viewStart"
+            android:drawableEnd="@drawable/icon_turkey_flag" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phone_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:expandedHintEnabled="false"
+            app:prefixText="+90 | "
+            android:hint="Numaranız"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="(5XX) XXX XX XX"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/continue_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Kayıt Ol"
+            android:textColor="@color/white"
+            app:cornerRadius="5dp" />
+        <TextView
+            android:id="@+id/log_in_with_social_media"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Sosyal Medya Hesapları İle Kayıt Ol" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sign_in_with_google_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Google İle Kayıt Ol"
+            app:cornerRadius="5dp"
+            app:icon="@drawable/icon_google"
+            app:iconTint="@color/white"
+            android:textColor="@color/white"
+            android:backgroundTint="#4285f4"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/no_account_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Hesabın Var mı?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sign_in_textview"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        />
+
+    <TextView
+        android:id="@+id/sign_in_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="Giriş Yap"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/no_account_textview"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

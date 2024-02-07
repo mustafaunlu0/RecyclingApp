@@ -18,5 +18,21 @@
         android:id="@+id/signUpFragment"
         android:name="com.example.recyclingapp.ui.login.SignUpFragment"
         android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" />
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_signUpDetailFragment"
+            app:destination="@id/signUpDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpDetailFragment"
+        android:name="com.example.recyclingapp.ui.login.SignUpDetailFragment"
+        android:label="fragment_sign_up_detail"
+        tools:layout="@layout/fragment_sign_up_detail" >
+        <action
+            android:id="@+id/action_signUpDetailFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
 </navigation>
