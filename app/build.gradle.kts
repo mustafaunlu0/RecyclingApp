@@ -60,4 +60,7 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-auth")
 
+    implementation("com.google.android.gms:play-services-location:21.1.0")
+
+
 }

@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding?.root)
-
+        applicationContext
         binding?.bottomNavigationView?.background = null
         binding?.bottomNavigationView?.menu?.getItem(2)?.isEnabled = false
         binding?.fab?.backgroundTintList = resources.getColorStateList(R.color.green)
