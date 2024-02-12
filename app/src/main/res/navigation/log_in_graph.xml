@@ -34,5 +34,8 @@
         <action
             android:id="@+id/action_signUpDetailFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_signUpDetailFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
     </fragment>
 </navigation>

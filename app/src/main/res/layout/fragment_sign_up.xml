@@ -78,12 +78,22 @@
             >
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone_edittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="number"
                 android:hint="(5XX) XXX XX XX"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <TextView
+            android:id="@+id/phone_error_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lütfen geçerli bir telefon numarası giriniz."
+            android:textColor="@color/red"
+            android:layout_margin="10dp"
+            android:visibility="gone"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/continue_button"

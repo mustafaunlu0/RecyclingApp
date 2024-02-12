@@ -29,11 +29,34 @@ class SignUpFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.signInTextview.setOnClickListener {
-            findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
+        with(binding)
+        {
+            signInTextview.setOnClickListener {
+                findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
+            }
+            continueButton.setOnClickListener {
+                if(validatePhoneNumber(phoneEdittext.text.toString()))
+                {
+                    findNavController().navigate(R.id.action_signUpFragment_to_signUpDetailFragment)
+                }
+                else{
+                    phoneErrorText.visibility=View.VISIBLE
+                }
+            }
+
         }
-        binding.continueButton.setOnClickListener {
-            findNavController().navigate(R.id.action_signUpFragment_to_signUpDetailFragment)
+    }
+
+    private fun validatePhoneNumber(number:String):Boolean
+    {
+        if(number.length!=10)
+        {
+            return false
+        }
+        else
+        {
+            //TODO add valid phone numbers
+            return true
         }
     }
 
