@@ -20,4 +20,9 @@
         android:name="com.example.recyclingapp.ui.main.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/rankingFragment"
+        android:name="com.example.recyclingapp.ui.main.ranking.RankingFragment"
+        android:label="fragment_ranking"
+        tools:layout="@layout/fragment_ranking" />
 </navigation>

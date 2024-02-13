@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.main.ranking.RankingFragment"
+    android:background="#E6E5E5">
+
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/silver_cup"
+        app:layout_constraintBottom_toTopOf="@id/second_winner_name"
+        app:layout_constraintStart_toStartOf="@id/second_winner_name"
+        app:layout_constraintEnd_toEndOf="@id/second_winner_name"
+
+        />
+
+
+    <TextView
+        android:id="@+id/second_winner_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="secondWinner"
+        app:layout_constraintBottom_toTopOf="@id/second_winner_score"
+        app:layout_constraintStart_toStartOf="@id/second_winner_score"
+        app:layout_constraintEnd_toEndOf="@id/second_winner_score"/>
+
+    <TextView
+        android:id="@+id/second_winner_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15 kg"
+        app:layout_constraintBottom_toTopOf="@id/second_winner"
+        app:layout_constraintStart_toStartOf="@id/second_winner"
+        app:layout_constraintEnd_toEndOf="@id/second_winner"/>
+
+
+    <View
+        android:id="@+id/second_winner"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/ranking_top_three_background"
+        android:backgroundTint="@color/baby_blue"
+        app:layout_constraintBottom_toTopOf="@id/ranking_recycler_view"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/gold_cup"
+        app:layout_constraintBottom_toTopOf="@id/first_winner_name"
+        app:layout_constraintStart_toStartOf="@id/first_winner_name"
+        app:layout_constraintEnd_toEndOf="@id/first_winner_name"
+
+        />
+
+
+    <TextView
+        android:id="@+id/first_winner_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="first Winner"
+        app:layout_constraintBottom_toTopOf="@id/first_winner_score"
+        app:layout_constraintStart_toStartOf="@id/first_winner_score"
+        app:layout_constraintEnd_toEndOf="@id/first_winner_score"/>
+
+
+    <TextView
+        android:id="@+id/first_winner_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20 kg"
+        app:layout_constraintBottom_toTopOf="@id/first_winner"
+        app:layout_constraintStart_toStartOf="@id/first_winner"
+        app:layout_constraintEnd_toEndOf="@id/first_winner"/>
+
+
+    <View
+        android:id="@+id/first_winner"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:background="@drawable/ranking_top_three_background"
+        android:backgroundTint="@color/green"
+        app:layout_constraintBottom_toTopOf="@id/ranking_recycler_view"
+        app:layout_constraintStart_toEndOf="@id/second_winner"
+        app:layout_constraintEnd_toStartOf="@id/third_winner"/>
+
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/bronze_cup"
+        app:layout_constraintBottom_toTopOf="@id/third_winner_name"
+        app:layout_constraintStart_toStartOf="@id/third_winner_name"
+        app:layout_constraintEnd_toEndOf="@id/third_winner_name"
+
+        />
+
+    <TextView
+        android:id="@+id/third_winner_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="third"
+        app:layout_constraintBottom_toTopOf="@id/third_winner_score"
+        app:layout_constraintStart_toStartOf="@id/third_winner_score"
+        app:layout_constraintEnd_toEndOf="@id/third_winner_score"/>
+
+    <TextView
+        android:id="@+id/third_winner_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10kg"
+        app:layout_constraintBottom_toTopOf="@id/third_winner"
+        app:layout_constraintStart_toStartOf="@id/third_winner"
+        app:layout_constraintEnd_toEndOf="@id/third_winner"/>
+
+
+    <View
+        android:id="@+id/third_winner"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/ranking_top_three_background"
+        android:backgroundTint="@color/pastel_yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toTopOf="@id/ranking_recycler_view" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ranking_recycler_view"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/ranking_background"
+        android:padding="10dp"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

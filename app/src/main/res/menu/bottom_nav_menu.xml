@@ -7,7 +7,7 @@
         android:title="Anasayfa" />
 
     <item
-        android:id="@+id/rankFragment"
+        android:id="@+id/rankingFragment"
         android:icon="@drawable/rank"
         android:title="Sıralama" />
 
