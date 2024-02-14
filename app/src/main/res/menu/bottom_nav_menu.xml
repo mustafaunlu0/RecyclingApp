@@ -15,7 +15,7 @@
         android:id="@+id/mapsFragment"
         android:title="Harita" />
     <item
-        android:id="@+id/gift"
+        android:id="@+id/prizeFragment"
         android:icon="@drawable/gift"
         android:title="Hediyeler" />
     <item

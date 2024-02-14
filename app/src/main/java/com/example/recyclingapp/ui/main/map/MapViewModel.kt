@@ -19,8 +19,6 @@ import com.google.android.gms.maps.model.StyleSpan
 
 class MapViewModel : ViewModel() {
 
-
-
     fun moveLetter(
         googleMap: GoogleMap,
         startMarker: LatLng,
