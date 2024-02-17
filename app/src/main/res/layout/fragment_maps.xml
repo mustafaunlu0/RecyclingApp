@@ -22,7 +22,7 @@
         android:layout_marginHorizontal="20dp"
         android:layout_height="80dp"
         android:visibility="gone"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         app:cardBackgroundColor="#D8D6D6"
         app:cardCornerRadius="10dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,6 +42,7 @@
             android:textSize="15sp" />
 
         <TextView
+            android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start|top"

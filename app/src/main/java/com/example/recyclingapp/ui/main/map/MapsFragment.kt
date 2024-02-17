@@ -1,6 +1,8 @@
 package com.example.recyclingapp.ui.main.map
 
 import android.Manifest
+import android.content.Context
+import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.graphics.BitmapFactory
 import androidx.fragment.app.Fragment
@@ -39,6 +41,9 @@ class MapsFragment : Fragment() {
     private lateinit var fusedLocationClient: FusedLocationProviderClient
 
     private  lateinit var binding : FragmentMapsBinding
+
+    private lateinit var sharedPreferences: SharedPreferences
+
 
     private val callback = OnMapReadyCallback { googleMap ->
         googleMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(requireContext(), R.raw.map))
@@ -95,6 +100,10 @@ class MapsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        sharedPreferences = requireContext().getSharedPreferences(
+            requireContext().packageName,
+            Context.MODE_PRIVATE
+        )
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
         mapFragment?.getMapAsync(callback)
 
@@ -119,7 +128,17 @@ class MapsFragment : Fragment() {
                     200)
             }
         }
+        val time = sharedPreferences.getString("time","null")
 
+        if( !time.isNullOrEmpty() && time!= "null"){
+            println("time: $time")
+            binding.fab.visibility = View.GONE
+            binding.energyCardview.visibility = View.VISIBLE
+            binding.time.text = time
+        }else{
+            binding.fab.visibility = View.VISIBLE
+            binding.energyCardview.visibility = View.GONE
+        }
 
     }
 

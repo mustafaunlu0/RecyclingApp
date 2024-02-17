@@ -89,7 +89,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/ibm_semibold"
-        android:text="Tahmini puan: 1"
+        android:text="Tahmini puan: 50"
         android:textColor="#7E7C7C"
         app:layout_constraintStart_toEndOf="@+id/product_detail_cv"
         app:layout_constraintTop_toTopOf="@id/product_detail_cv" />
@@ -98,7 +98,7 @@
         android:id="@+id/point_icon"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="1dp"
         android:src="@drawable/coin"
         app:layout_constraintStart_toEndOf="@id/product_point_textview"
         app:layout_constraintTop_toTopOf="@id/product_point_textview" />
