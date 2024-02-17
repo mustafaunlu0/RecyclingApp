@@ -7,19 +7,77 @@
     tools:context=".ui.main.information.InformationFragment"
     android:background="#E6E5E5">
 
-    <androidx.appcompat.widget.Toolbar
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:title="Neden Atık Kutusu Tanımlamalısın?"
+            app:titleEnabled="false">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/light_grey">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/navigation_icon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_arrow_back_ios_new_24"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Neden Atık Kutusu Tanımlamalısın?"
+                        android:fontFamily="@font/ibm_semibold"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@id/navigation_icon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="8dp"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--<androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/baseline_arrow_back_ios_24"
-        />
+        app:title="Neden Atık Kutusu Tanımlamalısın?"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        />-->
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintTop_toBottomOf="@id/appbarLayout"
         android:layout_margin="10dp"
         app:cardCornerRadius="10dp"
         android:padding="0dp">
@@ -40,16 +98,71 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/cart"
         android:layout_margin="10dp"
+        android:fontFamily="@font/ibm_semibold"
+        android:text="🚮 Çevrenizdeki Kutuları Keşfedin!"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:id="@+id/discover_paragraph"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/info_text"
+        android:layout_margin="10dp"
         android:fontFamily="@font/ibm_regular"
-        android:text="🚮 Çevrenizdeki Kutuları Keşfedin! \n \n
+        android:textColor="@color/black"
+        android:text=" Atık Toplama uygulamamız, çevrenizdeki atık kutularını kolayca bulmanızı ve hatta eksik olanları eklemenizi sağlayan bir platformdur. Geri dönüşüm çabalarına katkıda bulunmak için tasarlanmış bu uygulama sayesinde, çevrenizdeki atık yönetimini daha etkin hale getirebilirsiniz."/>
 
-Atık Toplama uygulamamız, çevrenizdeki atık kutularını kolayca bulmanızı ve hatta eksik olanları eklemenizi sağlayan bir platformdur. Geri dönüşüm çabalarına katkıda bulunmak için tasarlanmış bu uygulama sayesinde, çevrenizdeki atık yönetimini daha etkin hale getirebilirsiniz. \n \n
+        <TextView
+            android:id="@+id/join_recycling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/discover_paragraph"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/ibm_semibold"
+            android:text="♻️ Geri Dönüşüme Katılın!"
+            android:textSize="18sp"/>
+    <TextView
+            android:id="@+id/join_recycling_paragraph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/join_recycling"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/ibm_regular"
+            android:text=" Atık Toplama uygulamamız ile atık yönetiminde aktif rol alarak çevrenize ve dünyaya katkıda bulunun. Siz de daha temiz bir çevre için adım atın!" />
 
-♻️ Geri Dönüşüme Katılın! \n \n
 
-Atık Toplama uygulamamız ile atık yönetiminde aktif rol alarak çevrenize ve dünyaya katkıda bulunun. Siz de daha temiz bir çevre için adım atın! \n \n
+ <TextView
+            android:id="@+id/last_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/join_recycling_paragraph"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/ibm_semibold"
+            android:text="📱 Uygulamamız sayesinde!"
+            android:textSize="18sp"/>
+
+     <TextView
+            android:id="@+id/last_paragraph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/last_title"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/ibm_regular"
+            android:text=" Çevrenizde bulunan atık kutularını keşfetmek artık çok daha kolay! İhtiyacınız olan her an, sadece birkaç tıkla, çevrenizdeki atık kutularını görüntüleyebilir ve hatta eksik olanları sisteme ekleyebilirsiniz. Daha fazla geri dönüşüm kutusuna erişmek ve yeni kutular eklemek için hemen aşağıdaki 'Kutuları Keşfet ve Ekle' butonuna tıklayın!"/>
 
 
-📱 Uygulamamız sayesinde, çevrenizde bulunan atık kutularını keşfetmek artık çok daha kolay! İhtiyacınız olan her an, sadece birkaç tıkla, çevrenizdeki atık kutularını görüntüleyebilir ve hatta eksik olanları sisteme ekleyebilirsiniz. Daha fazla geri dönüşüm kutusuna erişmek ve yeni kutular eklemek için hemen aşağıdaki 'Kutuları Keşfet ve Ekle' butonuna tıklayın!"/>
+<com.google.android.material.button.MaterialButton
+    android:id="@+id/add_box"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/last_paragraph"
+    android:text="Kutuları Keşfet ve Ekle!"
+    app:cornerRadius="5dp"
+    android:layout_margin="10dp"
+    android:backgroundTint="#1c5334"
+    android:fontFamily="@font/ibm_regular"
+    />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

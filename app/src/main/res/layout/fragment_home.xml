@@ -307,7 +307,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/award_cardview"
+        android:id="@+id/info_cardview"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginTop="35dp"
@@ -351,14 +351,14 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/info_cardview"
+        android:id="@+id/award_cardview"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginTop="20dp"
         app:cardBackgroundColor="#3F51B5"
         app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/award_cardview">
+        app:layout_constraintTop_toBottomOf="@id/info_cardview">
 
         <ImageView
             android:layout_width="match_parent"

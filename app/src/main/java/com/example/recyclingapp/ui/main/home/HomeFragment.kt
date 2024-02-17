@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.recyclingapp.R
 import com.example.recyclingapp.databinding.FragmentHomeBinding
@@ -29,6 +30,10 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding?.productRecyclerview?.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
         binding?.productRecyclerview?.adapter = adapter
+        binding?.infoCardview?.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_informationFragment)
+        }
+
 
     }
 

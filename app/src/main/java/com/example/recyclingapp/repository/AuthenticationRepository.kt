@@ -26,5 +26,10 @@ class AuthenticationRepository{
         }
     }
 
+    fun signOut()
+    {
+        auth.signOut()
+    }
+
 
 }

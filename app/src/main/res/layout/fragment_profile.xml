@@ -82,7 +82,7 @@
         />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/adress"
+        android:id="@+id/address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#E6E5E5"
@@ -102,7 +102,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#E6E5E5"
-        app:layout_constraintTop_toBottomOf="@id/adress"
+        app:layout_constraintTop_toBottomOf="@id/address"
         android:text="Ayarlar"
         android:layout_margin="10dp"
         android:textColor="@color/black"
