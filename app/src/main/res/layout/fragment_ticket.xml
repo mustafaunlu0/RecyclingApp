@@ -22,7 +22,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/product_detail_cv"
-        android:layout_width="140dp"
+        android:layout_width="210dp"
         android:layout_height="140dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="28dp"
@@ -33,6 +33,28 @@
         app:cardPreventCornerOverlap="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title">
+
+
+        <ImageView
+            android:id="@+id/right"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/left"
+
+            />
+
+        <ImageView
+            android:id="@+id/left"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/right"
+
+            />
+
 
         <ImageView
             android:id="@+id/product_imageview"
@@ -92,53 +114,16 @@
         android:fontFamily="@font/ibm_semibold"
         android:text="Atık Ağırlığı (KG)"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@id/product_detail_cv"
         app:layout_constraintTop_toBottomOf="@id/product_point_textview" />
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/add_point"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="15dp"
-        android:backgroundTint="@color/green"
-        android:insetLeft="0dp"
-        android:insetTop="0dp"
-        android:insetRight="0dp"
-        android:insetBottom="0dp"
-        app:cornerRadius="50dp"
-        app:icon="@drawable/add"
-        app:iconGravity="textStart"
-        app:iconPadding="0dp"
-        app:iconSize="25dp"
-        app:layout_constraintStart_toEndOf="@id/product_detail_cv"
-        app:layout_constraintTop_toBottomOf="@id/kg_title_textview" />
-
-    <TextView
-        android:id="@+id/kg_textview"
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="17dp"
-        android:background="@drawable/kg_background"
-        android:fontFamily="@font/ibm_semibold"
-        android:paddingTop="2dp"
-        android:text="50"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@id/add_point"
-        app:layout_constraintTop_toBottomOf="@id/kg_title_textview"
-
-        />
-
-    <com.google.android.material.button.MaterialButton
         android:id="@+id/remove_point"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginHorizontal="10dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
         android:backgroundTint="@color/green"
         android:insetLeft="0dp"
@@ -149,7 +134,44 @@
         app:icon="@drawable/remove"
         app:iconGravity="textStart"
         app:iconPadding="0dp"
-        app:iconSize="25dp"
+        app:iconSize="20dp"
+        app:layout_constraintStart_toEndOf="@id/product_detail_cv"
+        app:layout_constraintTop_toBottomOf="@id/kg_title_textview" />
+
+    <TextView
+        android:id="@+id/kg_textview"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/kg_background"
+        android:fontFamily="@font/ibm_semibold"
+        android:paddingTop="2dp"
+        android:text="10"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/remove_point"
+        app:layout_constraintTop_toBottomOf="@id/kg_title_textview"
+
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/add_point"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/green"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        app:cornerRadius="50dp"
+        app:icon="@drawable/add"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="20dp"
         app:layout_constraintStart_toEndOf="@id/kg_textview"
         app:layout_constraintTop_toBottomOf="@id/kg_title_textview" />
 
@@ -164,7 +186,7 @@
         app:layout_constraintTop_toBottomOf="@id/product_detail_cv">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email_edittext"
+            android:id="@+id/desc_textview"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:fontFamily="@font/ibm_regular"
@@ -280,7 +302,7 @@
     </androidx.cardview.widget.CardView>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/sign_in_button"
+        android:id="@+id/create_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
@@ -290,16 +312,17 @@
         android:textColor="@color/white"
         app:cornerRadius="15dp"
         app:layout_constraintTop_toBottomOf="@id/time1" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/award_cardview"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginTop="35dp"
         android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="35dp"
         app:cardBackgroundColor="#8BC34A"
         app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sign_in_button">
+        app:layout_constraintTop_toBottomOf="@id/create_button">
 
         <ImageView
             android:layout_width="match_parent"
@@ -313,7 +336,7 @@
             android:layout_gravity="center_horizontal|top"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/ibm_semibold"
-            android:text="Atık Kutusu Tanımla"
+            android:text="Atıklarını Topla"
             android:textColor="@color/white"
             android:textSize="18sp"
 
@@ -325,7 +348,7 @@
             android:layout_gravity="center_horizontal|center_vertical"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/ibm_regular"
-            android:text="Çevrenizdeki geri dönüşüm kutularını sistemimize kaydedin."
+            android:text="Atıklarını biriktir ve teslim et. Nice birlikte geleceğini inşa ettiğimiz temiz günlere!"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="14sp"

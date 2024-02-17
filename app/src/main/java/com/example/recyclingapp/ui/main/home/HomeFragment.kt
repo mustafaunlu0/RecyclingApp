@@ -12,7 +12,7 @@ import com.example.recyclingapp.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
-    private val adapter = ProductAdapter()
+    private val adapter = ProductAdapter { onItemClick() }
     private var binding : FragmentHomeBinding? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +35,10 @@ class HomeFragment : Fragment() {
         }
 
 
+    }
+
+    private fun onItemClick(){
+        findNavController().navigate(R.id.action_homeFragment_to_ticketFragment)
     }
 
 

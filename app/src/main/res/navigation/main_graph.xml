@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_informationFragment"
             app:destination="@id/informationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_ticketFragment"
+            app:destination="@id/ticketFragment" />
     </fragment>
     <fragment
         android:id="@+id/mapsFragment"
@@ -42,7 +45,11 @@
         android:id="@+id/ticketFragment"
         android:name="com.example.recyclingapp.ui.main.ticket.TicketFragment"
         android:label="fragment_ticket"
-        tools:layout="@layout/fragment_ticket" />
+        tools:layout="@layout/fragment_ticket" >
+        <action
+            android:id="@+id/action_ticketFragment_to_mapsFragment2"
+            app:destination="@id/mapsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/informationFragment"
         android:name="com.example.recyclingapp.ui.main.information.InformationFragment"
