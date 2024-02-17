@@ -6,25 +6,48 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.main.profile.ProfileFragment"
     android:background="#E6E5E5">
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:lottie_fileName="real_green.json"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_speed="0.5"
+            android:layout_marginEnd="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="50dp"
+            />
 
-
-    <de.hdodenhof.circleimageview.CircleImageView
+    <androidx.cardview.widget.CardView
         android:id="@+id/avatar"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@color/light_grey"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="100dp"
-        />
+        android:backgroundTint="@color/light_green"
+        app:cardCornerRadius="50dp"
+        >
+
+        <ImageView
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/baseline_person_24"
+            android:layout_gravity="center"
+            />
+    </androidx.cardview.widget.CardView>
+
 
     <TextView
         android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Deniz Şimşek"
-        app:layout_constraintTop_toBottomOf="@id/avatar"
+        app:layout_constraintTop_toBottomOf="@id/lottie"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="10dp"
@@ -54,7 +77,7 @@
         android:layout_margin="10dp"
         android:textColor="@color/black"
         android:textAlignment="viewStart"
-        android:drawableLeft="@drawable/baseline_history_24"
+        android:drawableLeft="@drawable/history_icon_with_background_tint"
         android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
         />
 
@@ -68,23 +91,11 @@
         android:layout_margin="10dp"
         android:textColor="@color/black"
         android:textAlignment="viewStart"
-        android:drawableLeft="@drawable/baseline_location_on_24"
+        android:drawableLeft="@drawable/location_icon_with_background_tint"
         android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
         />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/create_ticket"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#E6E5E5"
-        app:layout_constraintTop_toBottomOf="@id/adress"
-        android:text="Ticket Oluştur"
-        android:layout_margin="10dp"
-        android:textColor="@color/black"
-        android:textAlignment="viewStart"
-        android:drawableLeft="@drawable/baseline_add_circle_outline_24"
-        android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
-        />
+
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/settings"
@@ -96,7 +107,7 @@
         android:layout_margin="10dp"
         android:textColor="@color/black"
         android:textAlignment="viewStart"
-        android:drawableLeft="@drawable/baseline_settings_24"
+        android:drawableLeft="@drawable/settings_icon_with_background_tint"
         android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
         />
 
@@ -110,7 +121,7 @@
         android:layout_margin="10dp"
         android:textColor="@color/black"
         android:textAlignment="viewStart"
-        android:drawableLeft="@drawable/baseline_settings_24"
+        android:drawableLeft="@drawable/log_out_icon_with_bacgkround_tint"
         android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
         />
 

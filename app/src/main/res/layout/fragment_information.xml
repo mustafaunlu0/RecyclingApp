@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.main.information.InformationFragment"
+    android:background="#E6E5E5">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/baseline_arrow_back_ios_24"
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        android:padding="0dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/info2"
+            android:scaleType="fitXY"
+            />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <TextView
+        android:id="@+id/info_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cart"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/ibm_regular"
+        android:text="🚮 Çevrenizdeki Kutuları Keşfedin! \n \n
+
+Atık Toplama uygulamamız, çevrenizdeki atık kutularını kolayca bulmanızı ve hatta eksik olanları eklemenizi sağlayan bir platformdur. Geri dönüşüm çabalarına katkıda bulunmak için tasarlanmış bu uygulama sayesinde, çevrenizdeki atık yönetimini daha etkin hale getirebilirsiniz. \n \n
+
+♻️ Geri Dönüşüme Katılın! \n \n
+
+Atık Toplama uygulamamız ile atık yönetiminde aktif rol alarak çevrenize ve dünyaya katkıda bulunun. Siz de daha temiz bir çevre için adım atın! \n \n
+
+
+📱 Uygulamamız sayesinde, çevrenizde bulunan atık kutularını keşfetmek artık çok daha kolay! İhtiyacınız olan her an, sadece birkaç tıkla, çevrenizdeki atık kutularını görüntüleyebilir ve hatta eksik olanları sisteme ekleyebilirsiniz. Daha fazla geri dönüşüm kutusuna erişmek ve yeni kutular eklemek için hemen aşağıdaki 'Kutuları Keşfet ve Ekle' butonuna tıklayın!"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
