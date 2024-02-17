@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/prizeFragment">
+    app:startDestination="@id/ticketFragment">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -30,4 +30,9 @@
         android:name="com.example.recyclingapp.ui.main.prize.PrizeFragment"
         android:label="PrizeFragment"
         tools:layout="@layout/fragment_prize"/>
+    <fragment
+        android:id="@+id/ticketFragment"
+        android:name="com.example.recyclingapp.ui.main.ticket.TicketFragment"
+        android:label="fragment_ticket"
+        tools:layout="@layout/fragment_ticket" />
 </navigation>
