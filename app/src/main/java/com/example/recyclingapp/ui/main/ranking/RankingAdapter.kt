@@ -12,9 +12,9 @@ class RankingAdapter: RecyclerView.Adapter<RankingAdapter.RankingHolder>() {
 
     private val list= mutableListOf<User>()
     init {
-        list.add(User("Fiona","Rees",35))
-        list.add(User("Victor","Chapman",32))
-        list.add(User("Matt","Peters",35))
+        list.add(User("John","Doe",42))
+        list.add(User("Jessica","Bailey",40))
+        list.add(User("Justin","Turner",38))
         list.add(User("Max","Manning",35))
         list.add(User("Elizabeth","Wallace",35))
         list.add(User("Brandon","Powell",35))
