@@ -9,10 +9,11 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.recyclingapp.R
 import com.example.recyclingapp.databinding.FragmentHomeBinding
+import com.example.recyclingapp.model.Product
 
 class HomeFragment : Fragment() {
 
-    private val adapter = ProductAdapter { onItemClick() }
+    private val adapter = ProductAdapter { product -> onItemClick(product) }
     private var binding : FragmentHomeBinding? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,9 +38,12 @@ class HomeFragment : Fragment() {
 
     }
 
-    private fun onItemClick(){
-        findNavController().navigate(R.id.action_homeFragment_to_ticketFragment)
+    private fun onItemClick(product : Product){
+        val bundle = Bundle()
+        bundle.putParcelable("product",product)
+        findNavController().navigate(R.id.action_homeFragment_to_ticketFragment,bundle)
     }
+
 
 
 }

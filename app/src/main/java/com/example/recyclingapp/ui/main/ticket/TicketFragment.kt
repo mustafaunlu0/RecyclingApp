@@ -12,6 +12,7 @@ import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.findNavController
 import com.example.recyclingapp.R
 import com.example.recyclingapp.databinding.FragmentTicketBinding
+import com.example.recyclingapp.model.Product
 
 
 class TicketFragment : Fragment() {
@@ -44,6 +45,11 @@ class TicketFragment : Fragment() {
             Context.MODE_PRIVATE
         )
 
+        val product = arguments?.getParcelable<Product>("product")
+        if(product != null){
+            binding.productImageview.setImageResource(product.image)
+            binding.nameTextview.text = product.name
+        }
         binding.time1.setOnClickListener {
             binding.time1.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.selected_color))
             binding.time2.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.unselected_color))

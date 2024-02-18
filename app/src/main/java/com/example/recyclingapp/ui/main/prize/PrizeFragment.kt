@@ -53,21 +53,18 @@ class PrizeFragment : Fragment() {
             binding.joysticCardview.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.selected_color))
             binding.bookCardview.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.unselected_color))
             binding.ticketCardview.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.unselected_color))
-
         }
         binding.bookCardview.setOnClickListener {
             setPrize(4)
             binding.joysticCardview.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.unselected_color))
             binding.bookCardview.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.selected_color))
             binding.ticketCardview.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.unselected_color))
-
         }
         binding.ticketCardview.setOnClickListener {
             setPrize(8)
             binding.joysticCardview.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.unselected_color))
             binding.bookCardview.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.unselected_color))
             binding.ticketCardview.setCardBackgroundColor(ContextCompat.getColor(requireContext(), R.color.selected_color))
-
         }
 
     }

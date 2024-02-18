@@ -10,5 +10,6 @@
     <color name="pastel_yellow">#D8C862</color>
     <color name="unselected_color">#E3E0E0</color>
     <color name="selected_color">#B5B2B2</color>
+    <color name="dark_selected_color">#3A3939</color>
 
 </resources>
