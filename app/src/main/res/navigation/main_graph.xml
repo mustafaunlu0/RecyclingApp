@@ -23,7 +23,11 @@
         android:id="@+id/mapsFragment"
         android:name="com.example.recyclingapp.ui.main.map.MapsFragment"
         android:label="fragment_maps"
-        tools:layout="@layout/fragment_maps" />
+        tools:layout="@layout/fragment_maps" >
+        <action
+            android:id="@+id/action_mapsFragment_to_ticketFragment"
+            app:destination="@id/ticketFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.recyclingapp.ui.main.profile.ProfileFragment"
@@ -81,6 +85,8 @@
         tools:layout="@layout/fragment_history" >
         <action
             android:id="@+id/action_historyFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/main_graph"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

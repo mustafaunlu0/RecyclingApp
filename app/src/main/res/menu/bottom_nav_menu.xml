@@ -4,24 +4,24 @@
     <item
         android:id="@+id/homeFragment"
         android:icon="@drawable/home"
-        android:title="Anasayfa" />
+        android:title="Home" />
 
     <item
         android:id="@+id/rankingFragment"
         android:icon="@drawable/rank"
-        android:title="Sıralama" />
+        android:title="Ranking" />
 
     <item
         android:id="@+id/mapsFragment"
-        android:title="Harita" />
+        android:title="Map" />
     <item
         android:id="@+id/prizeFragment"
         android:icon="@drawable/gift"
-        android:title="Hediyeler" />
+        android:title="Prizes" />
     <item
         android:id="@+id/profileFragment"
         android:icon="@drawable/account"
-        android:title="Profil" />
+        android:title="Profile" />
 
 
 </menu>

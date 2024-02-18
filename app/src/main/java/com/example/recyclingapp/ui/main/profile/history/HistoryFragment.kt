@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.recyclingapp.R
 import com.example.recyclingapp.databinding.FragmentHistoryBinding
@@ -31,6 +32,10 @@ class HistoryFragment : Fragment() {
         val adapter=HistoryAdapter()
         binding.historyRecyclerView.adapter=adapter
         binding.historyRecyclerView.layoutManager=LinearLayoutManager(context)
+        binding.navigationIcon.setOnClickListener {
+            findNavController().navigate(R.id.action_historyFragment_to_profileFragment)
+            findNavController().popBackStack()
+        }
     }
 
 

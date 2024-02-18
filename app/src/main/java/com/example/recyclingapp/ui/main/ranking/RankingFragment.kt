@@ -25,9 +25,9 @@ class RankingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        topThree.add(User("Deniz","Şimşek",42))
-        topThree.add(User("Mustafa","Ünlü",40))
-        topThree.add(User("user1","user1",38))
+        topThree.add(User("John","Doe",42))
+        topThree.add(User("Jessica","Bailey",40))
+        topThree.add(User("Justin","Turner",38))
         binding=FragmentRankingBinding.inflate(inflater,container,false)
         return binding.root
     }

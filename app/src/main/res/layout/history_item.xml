@@ -1,16 +1,15 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_card"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
     app:cardCornerRadius="10dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:backgroundTint="@color/light_green">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-
+        android:layout_height="match_parent"
+        android:background="@color/green">
     <androidx.cardview.widget.CardView
         android:id="@+id/product_detail_cv"
         android:layout_width="140dp"
@@ -45,7 +44,6 @@
             android:layout_gravity="bottom|center_horizontal"
             android:layout_marginBottom="5dp"
             android:text="Elektronik"
-            android:textColor="#707070"
             android:textSize="15sp"
             android:textStyle="bold" />
 
@@ -59,7 +57,7 @@
             android:layout_marginHorizontal="20dp"
             android:layout_marginStart="25dp"
             android:fontFamily="@font/ibm_semibold"
-            android:text="Atık Ağırlığı (KG): "
+            android:text="Waste Weight (KG): "
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/product_detail_cv"
@@ -86,8 +84,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/ibm_semibold"
-        android:text="Kazanılan Puan: "
-        android:textColor="#7E7C7C"
+        android:text="Points \nYou've Gained: "
         app:layout_constraintStart_toEndOf="@id/product_detail_cv"
         app:layout_constraintTop_toBottomOf="@id/recycled_kg" />
 
@@ -97,9 +94,9 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/ibm_semibold"
         android:text="1 "
-        android:textColor="#7E7C7C"
         app:layout_constraintStart_toEndOf="@id/product_point_textview"
-        app:layout_constraintTop_toTopOf="@id/product_point_textview" />
+        app:layout_constraintTop_toTopOf="@id/product_point_textview"
+            app:layout_constraintBottom_toBottomOf="@id/product_point_textview"/>
 
     <ImageView
         android:id="@+id/point_icon"
@@ -118,8 +115,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/ibm_semibold"
-            android:text="Toplama Saati:"
-            android:textColor="#7E7C7C"
+            android:text="Collection Time:"
             app:layout_constraintStart_toEndOf="@id/product_detail_cv"
             app:layout_constraintTop_toBottomOf="@id/product_point_textview" />
 
@@ -130,7 +126,6 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/ibm_semibold"
             android:text="13:00-14:00"
-            android:textColor="#7E7C7C"
             app:layout_constraintStart_toStartOf="@id/point"
             app:layout_constraintTop_toBottomOf="@id/product_point_textview" />
 
@@ -138,10 +133,8 @@
             android:id="@+id/desc_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:fontFamily="@font/ibm_semibold"
-            android:text="Açıklama: "
-            android:textColor="#7E7C7C"
+            android:text="Description: "
             app:layout_constraintStart_toStartOf="@id/time_title"
             app:layout_constraintTop_toBottomOf="@id/time_title"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -151,13 +144,11 @@
             android:id="@+id/desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:fontFamily="@font/ibm_semibold"
             android:ellipsize="end"
             android:maxWidth="100dp"
             android:maxLines="1"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a nisl erat. Sed eu tortor pellentesque erat tincidunt posuere nec ac quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin non leo eu elit rutrum laoreet. Nam eget viverra orci, non aliquet nisi. Integer mattis ullamcorper purus, ac ultrices lorem gravida in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
-            android:textColor="#7E7C7C"
             app:layout_constraintStart_toStartOf="@id/time"
             app:layout_constraintTop_toBottomOf="@id/time_title"
             app:layout_constraintBottom_toBottomOf="parent"

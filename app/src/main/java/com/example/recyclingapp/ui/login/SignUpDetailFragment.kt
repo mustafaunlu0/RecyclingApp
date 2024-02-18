@@ -46,6 +46,9 @@ class SignUpDetailFragment : Fragment() {
                     println("false")
                 }
             }
+            navigationIcon.setOnClickListener {
+                findNavController().navigate(R.id.action_signUpDetailFragment_to_signUpFragment)
+            }
         }
     }
 

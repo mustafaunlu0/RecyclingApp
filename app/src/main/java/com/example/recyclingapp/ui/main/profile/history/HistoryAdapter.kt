@@ -1,5 +1,7 @@
 package com.example.recyclingapp.ui.main.profile.history
 
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
@@ -27,6 +29,11 @@ class HistoryAdapter:RecyclerView.Adapter<HistoryAdapter.HistoryHolder>() {
     override fun getItemCount(): Int = historyList.size
 
     override fun onBindViewHolder(holder: HistoryHolder, position: Int) {
+
+        if(position%2==1)
+        {
+            holder.binding.layout.setBackgroundColor(holder.itemView.context.resources.getColor(R.color.light_grey))
+        }
 
         holder.binding.productImage.setImageDrawable(ContextCompat.getDrawable(holder.itemView.context,historyList[position].product.image))
         holder.binding.productName.text=historyList[position].product.name

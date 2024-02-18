@@ -6,21 +6,68 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.login.SignUpDetailFragment">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="Kayıt Ol"
         app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="@drawable/baseline_arrow_back_ios_24"
-        />
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/light_grey">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/navigation_icon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_arrow_back_ios_new_24"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sign Up"
+                        android:fontFamily="@font/ibm_semibold"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@id/navigation_icon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="8dp"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
 
     <TextView
         android:id="@+id/membership_info_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Üyelik Bilgileri"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:text="Membership Informations"
+        app:layout_constraintTop_toBottomOf="@id/appbarLayout"
         app:layout_constraintStart_toStartOf="parent"
         android:textSize="24sp"
         android:layout_margin="10dp"
@@ -29,7 +76,7 @@
         android:id="@+id/membership_explanation_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Üyelik türünüzü seçip bilgilerinizi tamamlayın."
+        android:text="Please select your membership type and compelete your registration."
         app:layout_constraintTop_toBottomOf="@id/membership_info_textview"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_margin="10dp"/>
@@ -38,7 +85,7 @@
         android:id="@+id/membership_type_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Üyelik türü \u002A"
+        android:text="Membership Type \u002A"
         app:layout_constraintTop_toBottomOf="@id/membership_explanation_textview"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_margin="10dp"/>
@@ -57,13 +104,13 @@
             android:id="@+id/personal_account_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bireysel"/>
+            android:text="Individual"/>
 
         <RadioButton
             android:id="@+id/corporate_account_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Kurumsal"
+            android:text="Corporate"
             />
 
     </RadioGroup>
@@ -74,7 +121,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         app:layout_constraintTop_toBottomOf="@id/membership_type"
-        android:hint="İsim">
+        android:hint="First Name">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/name_edittext"
@@ -89,7 +136,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         app:layout_constraintTop_toBottomOf="@id/name_text_layout"
-        android:hint="Soyisim">
+        android:hint="Last Name">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/surname_edittext"
@@ -104,7 +151,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         app:layout_constraintTop_toBottomOf="@id/surname_text_layout"
-        android:hint="Email">
+        android:hint="E-mail">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email_edittext"
@@ -120,7 +167,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         app:layout_constraintTop_toBottomOf="@id/email_text_layout"
-        android:hint="Şifre"
+        android:hint="Password"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -137,7 +184,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         app:layout_constraintTop_toBottomOf="@id/password_text_layout"
-        android:hint="Tekrar Şifre"
+        android:hint="Password Again"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -153,7 +200,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Kayıt Ol"
+        android:text="Sign Up"
         app:layout_constraintTop_toBottomOf="@id/password_again_text_layout"
         android:textColor="@color/white"
         app:cornerRadius="5dp"

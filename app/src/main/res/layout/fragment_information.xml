@@ -45,7 +45,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Neden Atık Kutusu Tanımlamalısın?"
+                        android:text="Why You Should Define Recycling Bin?"
                         android:fontFamily="@font/ibm_semibold"
                         android:textSize="18sp"
                         app:layout_constraintStart_toEndOf="@id/navigation_icon"
@@ -99,7 +99,7 @@
         app:layout_constraintTop_toBottomOf="@id/cart"
         android:layout_margin="10dp"
         android:fontFamily="@font/ibm_semibold"
-        android:text="🚮 Çevrenizdeki Kutuları Keşfedin!"
+        android:text="🚮 Discover the Bins Around You!"
         android:textSize="18sp"
         android:textColor="@color/black"
         />
@@ -111,7 +111,7 @@
         android:layout_margin="10dp"
         android:fontFamily="@font/ibm_regular"
         android:textColor="@color/black"
-        android:text=" Atık Toplama uygulamamız, çevrenizdeki atık kutularını kolayca bulmanızı ve hatta eksik olanları eklemenizi sağlayan bir platformdur. Geri dönüşüm çabalarına katkıda bulunmak için tasarlanmış bu uygulama sayesinde, çevrenizdeki atık yönetimini daha etkin hale getirebilirsiniz."/>
+        android:text=" Our Waste Collection app is a platform that enables you to easily find waste bins in your vicinity and even add missing ones. Designed to contribute to recycling efforts, this app allows you to make waste management in your area more effective."/>
 
         <TextView
             android:id="@+id/join_recycling"
@@ -120,7 +120,7 @@
             app:layout_constraintTop_toBottomOf="@id/discover_paragraph"
             android:layout_margin="10dp"
             android:fontFamily="@font/ibm_semibold"
-            android:text="♻️ Geri Dönüşüme Katılın!"
+            android:text="♻️ Join the Recycling!"
             android:textSize="18sp"/>
     <TextView
             android:id="@+id/join_recycling_paragraph"
@@ -129,7 +129,7 @@
             app:layout_constraintTop_toBottomOf="@id/join_recycling"
             android:layout_margin="10dp"
             android:fontFamily="@font/ibm_regular"
-            android:text=" Atık Toplama uygulamamız ile atık yönetiminde aktif rol alarak çevrenize ve dünyaya katkıda bulunun. Siz de daha temiz bir çevre için adım atın!" />
+            android:text=" Take an active role in waste management in your surroundings and contribute to the environment and the world with our Waste Collection app. Take a step towards a cleaner environment!" />
 
 
  <TextView
@@ -139,7 +139,7 @@
             app:layout_constraintTop_toBottomOf="@id/join_recycling_paragraph"
             android:layout_margin="10dp"
             android:fontFamily="@font/ibm_semibold"
-            android:text="📱 Uygulamamız sayesinde!"
+            android:text="📱 With Our App!"
             android:textSize="18sp"/>
 
      <TextView
@@ -149,7 +149,7 @@
             app:layout_constraintTop_toBottomOf="@id/last_title"
             android:layout_margin="10dp"
             android:fontFamily="@font/ibm_regular"
-            android:text=" Çevrenizde bulunan atık kutularını keşfetmek artık çok daha kolay! İhtiyacınız olan her an, sadece birkaç tıkla, çevrenizdeki atık kutularını görüntüleyebilir ve hatta eksik olanları sisteme ekleyebilirsiniz. Daha fazla geri dönüşüm kutusuna erişmek ve yeni kutular eklemek için hemen aşağıdaki 'Kutuları Keşfet ve Ekle' butonuna tıklayın!"/>
+            android:text=" Discovering waste bins in your area is now much easier! At any time you need, with just a few clicks, you can view the waste bins around you and even add missing ones to the system. Click the 'Discover and Add Bins' button below to access more recycling bins and add new ones!"/>
 
 
 <com.google.android.material.button.MaterialButton
@@ -157,7 +157,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:layout_constraintTop_toBottomOf="@id/last_paragraph"
-    android:text="Kutuları Keşfet ve Ekle!"
+    android:text="Discover and Add Bins!"
     app:cornerRadius="5dp"
     android:layout_margin="10dp"
     android:backgroundTint="#1c5334"

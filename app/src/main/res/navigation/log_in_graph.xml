@@ -33,7 +33,8 @@
         tools:layout="@layout/fragment_sign_up_detail" >
         <action
             android:id="@+id/action_signUpDetailFragment_to_signUpFragment"
-            app:destination="@id/signUpFragment" />
+            app:destination="@id/signUpFragment"
+            app:popUpTo="@id/log_in_graph" />
         <action
             android:id="@+id/action_signUpDetailFragment_to_signInFragment"
             app:destination="@id/signInFragment" />

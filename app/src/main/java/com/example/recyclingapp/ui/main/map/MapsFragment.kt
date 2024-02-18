@@ -19,6 +19,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.recyclingapp.R
 import com.example.recyclingapp.databinding.FragmentMapsBinding
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -140,6 +141,9 @@ class MapsFragment : Fragment() {
             binding.energyCardview.visibility = View.GONE
         }
 
+        /*binding.fab.setOnClickListener {
+            findNavController().navigate(R.id.action_mapsFragment_to_ticketFragment)
+        }*/
     }
 
     override fun onRequestPermissionsResult(requestCode: Int,

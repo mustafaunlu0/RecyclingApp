@@ -44,7 +44,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Geçmiş"
+                        android:text="History"
                         android:fontFamily="@font/ibm_semibold"
                         android:textSize="18sp"
                         app:layout_constraintStart_toEndOf="@id/navigation_icon"

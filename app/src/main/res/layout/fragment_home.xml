@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/ibm_regular"
-            android:text="Hoş geldin, Mustafa"
+            android:text="Welcome, Mustafa"
             android:textColor="@color/black"
             android:textSize="25sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/ibm_regular"
-            android:text="Hadi dünyayı güzelleştirelim."
+            android:text="Let's make the world a better place."
             android:textColor="#7E7B7B"
             android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +63,7 @@
                 android:layout_marginStart="2dp"
                 android:gravity="center_vertical"
                 android:paddingHorizontal="3dp"
-                android:text="0 puan"
+                android:text="0 Points"
                 android:textColor="@color/white"
                 android:textSize="15sp"
 
@@ -98,7 +98,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="-5dp"
         android:fontFamily="@font/ibm_semibold"
-        android:text="Geri Dönüştür"
+        android:text="Recycle"
         android:textColor="@color/green"
         android:textSize="25sp"
         app:layout_constraintStart_toEndOf="@id/recycling_imageview"
@@ -111,7 +111,6 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:layout_marginTop="10dp"
-
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/recycling_imageview" />
 
@@ -132,7 +131,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
         android:fontFamily="@font/ibm_semibold"
-        android:text="Ne değişti?"
+        android:text="What Has Changed?"
         android:textColor="@color/green"
         android:textSize="25sp"
         android:textStyle="bold"
@@ -166,7 +165,7 @@
             android:layout_marginHorizontal="7dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/ibm_semibold"
-            android:text="Kazanılan Enerji"
+            android:text="Collected Energy"
             android:textColor="#707070"
             android:textSize="16sp" />
 
@@ -208,7 +207,7 @@
             android:layout_marginHorizontal="7dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/ibm_semibold"
-            android:text="Dönüştürülen Atık"
+            android:text="Recycled Waste"
             android:textColor="#707070"
             android:textSize="16sp" />
 
@@ -248,7 +247,7 @@
             android:layout_marginHorizontal="7dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/ibm_semibold"
-            android:text="Karbon Emisyonu"
+            android:text="Carbon Emission"
             android:textColor="#707070"
             android:textSize="16sp" />
 
@@ -291,7 +290,7 @@
             android:layout_marginHorizontal="7dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/ibm_semibold"
-            android:text="Toplanan Puan"
+            android:text="Points You've Gained"
             android:textColor="#707070"
             android:textSize="16sp" />
 
@@ -328,7 +327,7 @@
             android:layout_gravity="center_horizontal|top"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/ibm_semibold"
-            android:text="Atık Kutusu Tanımla"
+            android:text="Define Waste Bin"
             android:textColor="@color/white"
             android:textSize="18sp"
 
@@ -340,7 +339,7 @@
             android:layout_gravity="center_horizontal|center_vertical"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/ibm_regular"
-            android:text="Çevrenizdeki geri dönüşüm kutularını sistemimize kaydedin."
+            android:text="Register the recycling bins around you into our system."
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="14sp"
@@ -372,7 +371,7 @@
             android:layout_gravity="center_horizontal|top"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/ibm_semibold"
-            android:text="Süpriz Hediyeler"
+            android:text="Surprise Gifts"
             android:textColor="@color/white"
             android:textSize="18sp"
 
@@ -384,7 +383,7 @@
             android:layout_gravity="center_horizontal|center_vertical"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/ibm_regular"
-            android:text="Puanları topla, üst sıralara oyna ve süpriz hediyeler kazanma şansı yakala."
+            android:text="Collect points, compete for top rankings, and have a chance to win surprise gifts."
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="14sp"

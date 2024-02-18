@@ -7,14 +7,14 @@ object ProductDataSource  {
 
     operator fun invoke(): ArrayList<Product> {
         val products : ArrayList<Product> = arrayListOf()
-        products.add(Product(R.drawable.plastic,"Plastik"))
-        products.add(Product(R.drawable.paper,"Kağıt"))
-        products.add(Product(R.drawable.electronic,"Elektronik"))
-        products.add(Product(R.drawable.glass,"Cam"))
-        products.add(Product(R.drawable.oil_bottle,"Yağ"))
+        products.add(Product(R.drawable.plastic,"Plastic"))
+        products.add(Product(R.drawable.paper,"Paper"))
+        products.add(Product(R.drawable.electronic,"Electronic"))
+        products.add(Product(R.drawable.glass,"Glass"))
+        products.add(Product(R.drawable.oil_bottle,"Oil"))
         products.add(Product(R.drawable.material,"Metal"))
-        products.add(Product(R.drawable.clothes,"Tekstil"))
-        products.add(Product(R.drawable.battery,"Pil"))
+        products.add(Product(R.drawable.clothes,"Textile"))
+        products.add(Product(R.drawable.battery,"Battery"))
         return products
 
     }

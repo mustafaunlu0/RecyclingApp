@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Hoş geldin"
+        android:text="Welcome"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:fontFamily="@font/ibm_regular"
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/ibm_regular"
-        android:text="Hesap oluşturmak için önce cep telefonunuzu girin."
+        android:text="Please enter your mobile phone number to create an account."
         android:textColor="#7E7B7B"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Ülke Kodu"
+            android:text="Country Code"
             android:clickable="false"
             android:textColor="#707070"
             android:backgroundTint="#D8D6D6"
@@ -74,7 +74,7 @@
             android:layout_margin="10dp"
             app:expandedHintEnabled="false"
             app:prefixText="+90 | "
-            android:hint="Numaranız"
+            android:hint="Your Phone Number"
             >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -90,7 +90,7 @@
             android:id="@+id/phone_error_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lütfen geçerli bir telefon numarası giriniz."
+            android:text="Please enter a valid phone number."
             android:textColor="@color/red"
             android:layout_margin="10dp"
             android:visibility="gone"/>
@@ -100,7 +100,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Kayıt Ol"
+            android:text="Sign Up"
             android:textColor="@color/white"
             app:cornerRadius="5dp" />
         <TextView
@@ -108,14 +108,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Sosyal Medya Hesapları İle Kayıt Ol" />
+            android:text="Sign Up With Social Media" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/sign_in_with_google_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Google İle Kayıt Ol"
+            android:text="Sign Up With Google"
             app:cornerRadius="5dp"
             app:icon="@drawable/icon_google"
             app:iconTint="@color/white"
@@ -130,7 +130,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="10dp"
-        android:text="Hesabın Var mı?"
+        android:text="Already Have An Account?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/sign_in_textview"
@@ -143,7 +143,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginBottom="10dp"
-        android:text="Giriş Yap"
+        android:text="Log In"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Hoş geldin"
+        android:text="Welcome"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:fontFamily="@font/ibm_regular"
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/ibm_regular"
-        android:text="Başlamak için önce giriş yapın ya da üye olun."
+        android:text="Please log in or register to get started."
         android:textColor="#7E7B7B"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,7 +60,7 @@
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email"
+            android:text="E-mail"
             android:layout_weight="1"
             android:textAllCaps="false"/>
 
@@ -70,7 +70,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Telefon"
+            android:text="Phone Number"
             android:textAllCaps="false"/>
 
     </com.google.android.material.button.MaterialButtonToggleGroup>
@@ -89,7 +89,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:hint="Email">
+            android:hint="E-mail">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email_edittext"
@@ -105,7 +105,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:hint="Şifre"
+            android:hint="Password"
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -121,14 +121,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_margin="10dp"
-            android:text="Şifremi Unuttum" />
+            android:text="Forgot My Password" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/sign_in_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Giriş Yap"
+            android:text="Log In"
             android:textColor="@color/white"
             app:cornerRadius="5dp" />
 
@@ -137,14 +137,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Sosyal Medya Hesapları İle Giriş Yap" />
+            android:text="Log In With Social Media" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/sign_in_with_google_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Google İle Giriş Yap"
+            android:text="Log In With Google"
             app:cornerRadius="5dp"
             app:icon="@drawable/icon_google"
             app:iconTint="@color/white"
@@ -168,7 +168,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Ülke Kodu"
+            android:text="Country Code"
             android:clickable="false"
             android:textColor="#707070"
             android:backgroundTint="#D8D6D6"
@@ -185,7 +185,7 @@
             android:layout_margin="10dp"
             app:expandedHintEnabled="false"
             app:prefixText="+90 | "
-            android:hint="Numaranız"
+            android:hint="Your Phone Number"
             >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -203,7 +203,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Devam Et"
+            android:text="Continue"
             android:textColor="@color/white"
             app:cornerRadius="5dp" />
 
@@ -215,7 +215,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="10dp"
-        android:text="Hesabın Yok Mu?"
+        android:text="Don't Have An Account?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/sign_up_textview"
@@ -228,7 +228,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginBottom="10dp"
-        android:text="Kayıt Ol"
+        android:text="Sign Up"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -49,15 +49,7 @@ class SignUpFragment : Fragment() {
 
     private fun validatePhoneNumber(number:String):Boolean
     {
-        if(number.length!=10)
-        {
-            return false
-        }
-        else
-        {
-            //TODO add valid phone numbers
-            return true
-        }
+        return number.length == 10
     }
 
 }

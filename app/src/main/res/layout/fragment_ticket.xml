@@ -14,7 +14,7 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/ibm_semibold"
-        android:text="Atık Türü Seçiniz"
+        android:text="Select Waste Type"
         android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,7 +89,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/ibm_semibold"
-        android:text="Tahmini puan: 50"
+        android:text="Estimated points: 50"
         android:textColor="#7E7C7C"
         app:layout_constraintStart_toEndOf="@+id/product_detail_cv"
         app:layout_constraintTop_toTopOf="@id/product_detail_cv" />
@@ -112,7 +112,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/ibm_semibold"
-        android:text="Atık Ağırlığı (KG)"
+        android:text="Waste Weight (KG)"
         android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@id/product_detail_cv"
@@ -181,9 +181,11 @@
         android:layout_height="160dp"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="30dp"
-        android:hint="Açıklama.."
+        android:hint="Description.."
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/product_detail_cv">
+        app:layout_constraintTop_toBottomOf="@id/product_detail_cv"
+        app:boxStrokeColor="@color/green"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/desc_textview"
@@ -204,7 +206,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/ibm_semibold"
-        android:text="Toplama Saati"
+        android:text="Collection Time"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -308,7 +310,7 @@
         android:layout_marginHorizontal="50dp"
         android:layout_marginTop="30dp"
         android:backgroundTint="@color/green"
-        android:text="Oluştur"
+        android:text="Create"
         android:textColor="@color/white"
         app:cornerRadius="15dp"
         app:layout_constraintTop_toBottomOf="@id/time1" />
@@ -336,7 +338,7 @@
             android:layout_gravity="center_horizontal|top"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/ibm_semibold"
-            android:text="Atıklarını Topla"
+            android:text="Collect the Waste"
             android:textColor="@color/white"
             android:textSize="18sp"
 
@@ -348,7 +350,7 @@
             android:layout_gravity="center_horizontal|center_vertical"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/ibm_regular"
-            android:text="Atıklarını biriktir ve teslim et. Nice birlikte geleceğini inşa ettiğimiz temiz günlere!"
+            android:text="Collect and deliver your waste. Let's build a clean future together!"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="14sp"
