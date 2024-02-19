@@ -18,7 +18,6 @@ import com.example.recyclingapp.model.Product
 class TicketFragment : Fragment() {
 
     private lateinit var sharedPreferences: SharedPreferences
-
     private var cardViewText: String = ""
     lateinit var binding: FragmentTicketBinding
     private var kg: Int = 10
@@ -72,7 +71,7 @@ class TicketFragment : Fragment() {
             kg++
             if(point<100){
                 point += 5
-                binding.productPointTextview.text = "Tahmini puan: $point"
+                binding.productPointTextview.text = "Points: $point"
             }
             binding.kgTextview.text = kg.toString()
         }
@@ -83,7 +82,7 @@ class TicketFragment : Fragment() {
             }
             if(point>50){
                 point-=5
-                binding.productPointTextview.text = "Tahmini puan: $point"
+                binding.productPointTextview.text = "Points: $point"
 
             }
         }

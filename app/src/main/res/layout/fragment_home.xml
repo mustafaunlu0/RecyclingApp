@@ -47,7 +47,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/coin_background"
             android:orientation="horizontal"
             android:padding="10dp"
@@ -63,7 +63,7 @@
                 android:layout_marginStart="2dp"
                 android:gravity="center_vertical"
                 android:paddingHorizontal="3dp"
-                android:text="0 Points"
+                android:text="12 Points"
                 android:textColor="@color/white"
                 android:textSize="15sp"
 
@@ -300,7 +300,7 @@
             android:layout_gravity="center_horizontal|top"
             android:layout_marginStart="15dp"
             android:layout_marginTop="43dp"
-            android:text="0 P"
+            android:text="12 P"
             android:textColor="#CAA228"
             android:textSize="18sp" />
     </androidx.cardview.widget.CardView>

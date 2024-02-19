@@ -53,7 +53,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="30dp"
             android:fontFamily="@font/ibm_semibold"
-            android:text="50 P"
+            android:text="12 P"
             android:textSize="20sp"
             android:textAlignment="center"
             android:textColor="@color/black" />
