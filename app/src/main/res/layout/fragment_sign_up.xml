@@ -6,12 +6,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.login.SignUpFragment">
 
-    <!--TODO logo here -->
+
     <ImageView
         android:id="@+id/logo"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:src="@color/cardview_dark_background"
+        android:src="@drawable/eco"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
