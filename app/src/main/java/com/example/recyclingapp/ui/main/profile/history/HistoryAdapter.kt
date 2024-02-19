@@ -14,8 +14,8 @@ import com.example.recyclingapp.model.Ticket
 class HistoryAdapter:RecyclerView.Adapter<HistoryAdapter.HistoryHolder>() {
 
     private val historyList = mutableListOf(
-        Ticket("1", Product(R.drawable.plastic,"Plastik"),5,5,"Description","13:00-14:00"),
-        Ticket("1", Product(R.drawable.electronic,"Elektronik"),4,12,"Phasellus iaculis orci eu est lacinia, id viverra metus mattis. Nunc tempor elit id tincidunt cursus. Curabitur imperdiet elementum sodales. Vivamus mattis tortor erat, sed laoreet turpis bibendum nec. Aenean ultricies augue et pellentesque feugiat. Cras id dolor fringilla, bibendum lorem sit amet, gravida urna.","13:00-14:00"),
+        Ticket("1", Product(R.drawable.plastic,"Plastic"),14,70,"Description","13:00-14:00"),
+        Ticket("1", Product(R.drawable.electronic,"Electronic"),4,12,"Phasellus iaculis orci eu est lacinia, id viverra metus mattis. Nunc tempor elit id tincidunt cursus. Curabitur imperdiet elementum sodales. Vivamus mattis tortor erat, sed laoreet turpis bibendum nec. Aenean ultricies augue et pellentesque feugiat. Cras id dolor fringilla, bibendum lorem sit amet, gravida urna.","13:00-14:00"),
     )
 
     inner class HistoryHolder(val binding: HistoryItemBinding):RecyclerView.ViewHolder(binding.root)

@@ -83,7 +83,7 @@ class MapsFragment : Fragment() {
             googleMap,
             LatLng(center2.latitude, center2.longitude),
             LatLng(40.9948035, 29.0587282),
-            "Mustafa's Truck",
+            "Alfred's Truck",
             120000,
             resources
         )
