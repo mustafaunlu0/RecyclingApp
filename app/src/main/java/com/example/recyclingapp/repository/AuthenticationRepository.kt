@@ -1,9 +1,12 @@
 package com.example.recyclingapp.repository
 
+import androidx.lifecycle.MutableLiveData
 import com.example.recyclingapp.model.Resource
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.withContext
 import java.util.concurrent.Flow
 import javax.inject.Inject
 
@@ -15,15 +18,18 @@ class AuthenticationRepository{
         auth.createUserWithEmailAndPassword(email,password)
     }
 
-    fun signIn(email:String,password: String)
+    suspend fun signIn(email:String,password: String,isLoggedIn:MutableLiveData<Boolean>)
     {
-        auth.signInWithEmailAndPassword(email,password).addOnCompleteListener {
-            result->
-            if(result.isSuccessful)
-            {
-                println("signed ingmaig")
+
+        withContext(Dispatchers.IO) {
+
+            auth.signInWithEmailAndPassword(email,password).addOnCompleteListener {
+                    result->
+                isLoggedIn.postValue(result.isSuccessful)
+
             }
         }
+
     }
 
     fun signOut()

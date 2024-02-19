@@ -57,12 +57,10 @@ class SignInFragment : Fragment() {
             if(checkIfNull())
             {
                 viewModel.signIn(binding.emailEdittext.text.toString(),binding.passwordEdittext.text.toString())
-                val intent= Intent(context,MainActivity::class.java)
-                startActivity(intent)
-                activity?.finish()
 
             }
         }
+        observeLiveData()
     }
 
     private fun checkIfNull():Boolean
@@ -70,4 +68,22 @@ class SignInFragment : Fragment() {
         return binding.emailEdittext.text.toString().isNotEmpty() && binding.passwordEdittext.text.toString()
             .isNotEmpty()
     }
+
+    private fun observeLiveData()
+    {
+        viewModel.isLoggedIn.observe(viewLifecycleOwner)
+        {
+            if(it)
+            {
+                binding.noAccountError.visibility=View.GONE
+                val intent= Intent(context,MainActivity::class.java)
+                startActivity(intent)
+                activity?.finish()
+            }
+            else{
+                binding.noAccountError.visibility=View.VISIBLE
+            }
+        }
+    }
+
 }
